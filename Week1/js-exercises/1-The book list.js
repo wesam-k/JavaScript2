@@ -10,9 +10,10 @@ const books = [
       title: 'The Most Human Human',
       author: 'Brian Christian',
       alreadyRead: true,
-    },
+    }
   ];
-
+ 
+  let item ;
 
  let list =document.createElement('ul'); 
 for(let i =0; i< books.length;  i++){
@@ -22,7 +23,7 @@ for(let i =0; i< books.length;  i++){
   paragraphEle.appendChild(bookName);
   document.appendChild(paragraphEle);
 
-  let item = document.createElement('li');  // create items for each book so still use for 
+   item = document.createElement('li');  // create items for each book so still use for 
 
 
 }
