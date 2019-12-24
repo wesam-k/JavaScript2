@@ -8,21 +8,25 @@ function localTime(){
     let hours   = addZero(nlTime.getHours());
     let minutes = addZero(nlTime.getMinutes());
     let seconds = addZero(nlTime.getSeconds());
-    document.getElementById('timeZone').innerHTML = hours +":"+ minutes+":" +seconds ;
-localTime();
+    let zero =document.getElementById('timeZone');
+    zero.innerHTML = hours +":"+ minutes+":" +seconds ;
+    
+    function addZero(zero) {      // to add zero to number
+      if (zero < 10) {
+        zero= "0" + zero;
+      }
+      return zero
+    }
+  }
+    
+  localTime();
 
     timer; 
 let timer = setInterval(localTime,1000);
 
 
 
-function addZero(i) {      // to add zero to number
-    if (i < 10) {
-      i = "0" + i;
-    }
-    return i;
-  }
-}
+
 
 
 

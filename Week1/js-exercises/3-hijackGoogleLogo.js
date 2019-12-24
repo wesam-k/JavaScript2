@@ -6,5 +6,5 @@ function hijackGoogleLogo (){
     googleLog.setAttribute('src',' https://www.hackyourfuture.dk/static/logo-dark.svg')
     googleLog.srcset= " https://www.hackyourfuture.dk/static/logo-dark.svg";
 
-};
+}
 hijackGoogleLogo();
