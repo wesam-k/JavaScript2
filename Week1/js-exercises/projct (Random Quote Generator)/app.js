@@ -2,36 +2,36 @@
 
 let newQuotes = [{
     quote: "Don’t gain the world and lose your soul, wisdom is better than silver or gold",
-    author: "Bob Marley",
+    author: "-Bob Marley",
 
 },
 {
     quote: "Lighten up, just enjoy life, smile more, laugh more, and don’t get so worked up about things",
-    author: "Kenneth Branagh",
+    author: "-Kenneth Branagh",
 
 },
 {
     quote: "Don’t cry because it’s over, smile because it happened",
-    author: "Ludwig Jacobowski",
+    author: "-Ludwig Jacobowski",
 
 },
 {
-    quote: "Do stuff. Be clenched, curious. Not waiting for inspiration’s shove or society’s kiss on your forehead. Pay attention. It’s all about paying attention. Attention is vitality. It connects you with others. It makes you eager. Stay eager",
-    author: "Susan Sontag",
+    quote: "Do stuff. Be clenched, curious. Not waiting for inspiration’s shove or society’s kiss on your forehead. Pay attention. It’s all about paying attention. Attention is vitality. ",
+    author: "-Susan Sontag",
 
 },
 {
     quote: "To condense fact from the vapor of nuance.",
-    author: "Neal Stephenson",
+    author: "-Neal Stephenson",
 
 },
 {
     quote: "Falling burned and blinded through a Siberian sky.",
-    author: "William Gibson",
+    author: "-William Gibson",
 
 }];
 
-let colors = ["#E74C3C", "#9B59B6", "#3498DB", "#1ABC9C", "#27AE60","#F1C40F" ];
+let colors = ["#E74C3C", "#9B59B6", "#3498DB", "#50E7C9", "#27AE60","#F1C40F" ];
 
                 
 document.getElementById('project').addEventListener('click',printQuote);
@@ -47,8 +47,7 @@ function quoteGenerate(newQuotes){
 function printQuote(){
     let randomColor = Math.floor(Math.random()* colors.length);
   let newColor = colors[randomColor];
-  style.backgroundColor = newColor;
-
+   
   let randomQuote= quoteGenerate(newQuotes);
 
   let newQuote = randomQuote.quote;
@@ -56,9 +55,19 @@ function printQuote(){
 
   document.getElementById('quote').innerHTML= newQuote;
   document.getElementById('author').innerHTML= newAuthor;
-  document.getElementsByClassName('textColor').style.backgroundColor=newColor;
-
+  let elementList =document.getElementsByClassName('textColor');
+  for (let i=0;i <=elementList.length;i++){
+      elementList[i].style.backgroundColor= newColor;
+      
+      document.querySelector('#quote').style.color = newColor;
+      
+      document.getElementById('author').style.color = newColor;
+  }
+   
+      
+        
+      
   
 }
   
-
+printQuote();
