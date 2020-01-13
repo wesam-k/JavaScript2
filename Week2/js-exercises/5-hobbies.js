@@ -13,9 +13,9 @@ const myHobbies = [
   document.getElementById('favoriteList').appendChild(ul);
 
   myHobbies.forEach(function (hobby){
-      let li =document.createElement('li');
+      const li =document.createElement('li');
       ul.appendChild(li);
-      li.innerHTML += hobby;
+     li.innerHTML += hobby;
   });    
 
    

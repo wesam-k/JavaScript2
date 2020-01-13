@@ -18,15 +18,13 @@ const mondayTasks = [
       duration: 60,
     },
   ];
-
-
+  const rate  =25;
   
-  const durationTime = mondayTasks.map(task =>{
-       const taskMin = task.duration / 60;
-      return  taskMin * 25 
-  })
- 
-  let output = durationTime.reduce((total, element)=>  total + parseFloat(element));
-    
+  function mondayWorth(){
+    const durationTime = mondayTasks.map(task =>task.duration *rate / 60);
+     const output = durationTime.reduce((total, num)=>  total + parseFloat(num));
+    return `€${output}`
+  }
+ console.log(mondayWorth());
 
-  console.log(`€ `+ output);
+ // please can you tell me why is the wrong here 

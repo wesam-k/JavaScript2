@@ -8,12 +8,14 @@ const hackYourFutureMembers = [
   ];
 
 
-
+function members(){
 
   const ageMember = hackYourFutureMembers.map(member => member.age);
   
-  const allAge = ageMember.reduce((total, ele)=> total+ parseFloat(ele));
+  const allAge = ageMember.reduce((total, num)=> total+ parseFloat(num));
 
+  return `"The collective age of the HYF team is: [${allAge}]"`
 
-  
-  console.log(`"The collective age of the HYF team is: [${allAge}]"`)
+};
+
+console.log(members());
