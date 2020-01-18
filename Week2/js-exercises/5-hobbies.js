@@ -8,7 +8,7 @@ const myHobbies = [
     'Going to the gym',
   ];
 
-   ul= document.createElement('ul')    // if u need ordered list just change ul to ol :)
+   let ul= document.createElement('ul')    // if u need ordered list just change ul to ol :)
  
   document.getElementById('favoriteList').appendChild(ul);
 
