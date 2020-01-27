@@ -1,7 +1,7 @@
 'use strict'
 
 
-let tip =document.getElementById('calc')
+const tip =document.getElementById('calc')
 tip.addEventListener('click',(event)=>{
    event.preventDefault();
    calculator()
@@ -9,10 +9,10 @@ tip.addEventListener('click',(event)=>{
 
 function calculator(){
    
-    let amount = document.getElementById('amount').value;
-    let discount = document.getElementById('discount').value;
-    let people = document.getElementById('people').value;
-    let eachHidden =document.getElementById('makeHidden')
+    const amount = document.getElementById('amount').value;
+    const discount = document.getElementById('discount').value;
+    const people = document.getElementById('people').value;
+    const eachHidden =document.getElementById('makeHidden')
     
 
      if(amount === "" ||discount === "" || people === ""){
@@ -29,7 +29,7 @@ function calculator(){
      }
 
      
-     let  percent = amount -(amount*discount /100);
+   const  percent = amount -(amount*discount /100);
     let total = percent / people;
     total = total.toFixed(2);
 
@@ -39,7 +39,7 @@ function calculator(){
     
    
 }  
-document.getElementById('makeHidden').style.display="none";
+
  
   
     

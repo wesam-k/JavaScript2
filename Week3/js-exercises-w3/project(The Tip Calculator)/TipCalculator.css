@@ -87,5 +87,6 @@ form{
 }
 #makeHidden{
     color: red;
+    display: none;
     
 }
